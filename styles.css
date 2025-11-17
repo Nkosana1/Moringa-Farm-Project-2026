@@ -199,6 +199,55 @@ section:last-of-type {
     padding-left: 1rem;
 }
 
+.contact-form form {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(44, 62, 47, 0.25);
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    transition: border-color 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-status {
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+}
+
+.form-status.error {
+    color: #a83232;
+}
+
 /* Typography - Fluid */
 h1,
 h2 {
@@ -391,6 +440,21 @@ footer p {
 
     .about-layout > * {
         flex: 1;
+    }
+
+    .contact-form form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-field:nth-child(4) {
+        grid-column: span 2;
+    }
+
+    .form-actions {
+        grid-column: span 2;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 

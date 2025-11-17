@@ -40,5 +40,59 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        const statusEl = contactForm.querySelector('.form-status');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            statusEl.classList.remove('error');
+            statusEl.textContent = '';
+
+            const formData = {
+                name: contactForm.name.value.trim(),
+                email: contactForm.email.value.trim(),
+                phone: contactForm.phone.value.trim(),
+                message: contactForm.message.value.trim()
+            };
+
+            if (!formData.name || !formData.email || !formData.message) {
+                statusEl.textContent = 'Please fill in all required fields.';
+                statusEl.classList.add('error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    statusEl.textContent = 'Thanks! Your message has been sent.';
+                    contactForm.reset();
+                } else {
+                    statusEl.textContent = data?.error || 'Something went wrong. Please try again.';
+                    statusEl.classList.add('error');
+                }
+            } catch (error) {
+                statusEl.textContent = 'Unable to send message at this time.';
+                statusEl.classList.add('error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Inquiry';
+            }
+        });
+    }
 });
 
