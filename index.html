@@ -11,8 +11,8 @@
     <meta property="og:url" content="https://kezimoringa.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kezi Pure Moringa">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:image:alt" content="Fresh organic moringa leaves and powder in wooden bowls">
+    <meta property="og:image" content="https://kezimoringa.com/assets/moringa.jpg">
+    <meta property="og:image:alt" content="Fresh moringa leaves harvested in Kezi City">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
             </button>
             <nav aria-label="Primary navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="about.html">Our Story</a></li>
                     <li><a href="moringa-powder.html">Moringa Powder</a></li>
                     <li><a href="moringa-oils.html">Moringa Oils</a></li>
@@ -40,7 +40,7 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero hero--collage">
             <article>
                 <p class="accent-pill">Kezi City Origins</p>
                 <h2>Pure Moringa from the Heart of Kezi</h2>
@@ -50,58 +50,74 @@
                     <a class="btn-secondary" href="about.html">Meet Our Growers</a>
                 </div>
             </article>
-            <figure>
-                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Fresh moringa leaves and powder displayed in wooden bowls">
-            </figure>
+            <div class="hero-media" aria-label="Moringa harvest and tasting imagery">
+                <img class="hero-image" src="assets/mbm2irj8_moringa_625x300_27_December_22.webp" alt="Moringa tea beside a bowl of vivid green powder">
+                <img class="hero-chip" src="assets/moringa.jpg" alt="Close-up of lush moringa leaves" aria-hidden="true">
+            </div>
         </section>
-        <section>
+        <section class="terroir-grid">
+            <figure>
+                <img src="assets/WhatsApp_Image_2024-09-26_at_15.17.39_3.jpg" alt="Hands preparing freshly harvested moringa sprigs">
+            </figure>
             <article>
                 <h3>Why Moringa?</h3>
-                <p>From boosting immunity to balancing energy, moringa is revered for its antioxidants, vitamins, and minerals. Discover how Kezi Pure harnesses this botanical powerhouse in every product.</p>
+                <p>Moringa is a cornerstone of Kezi wellness. Its natural antioxidants, plant protein, and earthy flavor keep rituals delicious and energizing.</p>
                 <ul>
-                    <li>High chlorophyll content supports detoxification</li>
-                    <li>Natural plant protein for daily vitality</li>
-                    <li>Essential amino acids and anti-inflammatory compounds</li>
+                    <li>Shade-dried leaves retain chlorophyll and potassium</li>
+                    <li>Hand-pressed oils stay silky without solvent extraction</li>
+                    <li>Tablets and sachets make daily nourishment effortless</li>
                 </ul>
             </article>
         </section>
-        <section>
-            <article>
-                <h3>Featured Staples</h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=600&q=80" alt="Jar of premium moringa powder with spoon">
-                        <h4>Sun-Dried Leaf Powder</h4>
-                        <p>Velvety micro-milled powder ideal for smoothies and broths.</p>
-                        <ul>
-                            <li>Boosts daily immunity</li>
-                            <li>Rich in iron and calcium</li>
-                        </ul>
-                        <p class="price">$19 · 250g pouch</p>
-                        <button class="btn-primary">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1502740479091-635887520276?auto=format&fit=crop&w=600&q=80" alt="Glass bottle of cold-pressed moringa oil">
-                        <h4>Cold-Pressed Seed Oil</h4>
-                        <p>Silky oil pressed within hours of harvest for skincare and drizzling.</p>
-                        <ul>
-                            <li>Deep hydration for skin</li>
-                            <li>High in omega-9 fatty acids</li>
-                        </ul>
-                        <p class="price">$32 · 60ml glass bottle</p>
-                        <button class="btn-primary">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1582728434425-8f30fdc70b66?auto=format&fit=crop&w=600&q=80" alt="Moringa capsules in amber jar">
-                        <h4>Daily Vitality Capsules</h4>
-                        <p>Capsules filled with pure leaf powder for easy daily rituals.</p>
-                        <ul>
-                            <li>Convenient nutrient support</li>
-                            <li>Third-party tested purity</li>
-                        </ul>
-                        <p class="price">$28 · 90 capsules</p>
-                        <button class="btn-primary">Add to Cart</button>
-                    </div>
+        <section class="gallery-ribbon" aria-label="Moringa lifestyle gallery">
+            <figure>
+                <img src="assets/240_F_341618570_50eWnLt7S2UUMiom2g1hu7FvsAF208Ow.jpg" alt="Basket of moringa powder surrounded by leaves">
+                <figcaption>Shade-dried at low heat for rich color.</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/MoringaPowder_250-7.jpg" alt="Packaged moringa powder ready for retail">
+                <figcaption>Reusable pouches seal in freshness.</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/Moringa_Mint_Lemon_Lime_Water.webp" alt="Moringa mint beverage with citrus">
+                <figcaption>Brew cold or hot for bright herbal sips.</figcaption>
+            </figure>
+        </section>
+        <section class="product-grid highlight-grid">
+            <article class="product-card">
+                <img src="assets/MoringaPowder_250-7.jpg" alt="Cultivated organic moringa powder pouch">
+                <div>
+                    <h4>Sun-Dried Leaf Powder</h4>
+                    <p>Velvety powder milled within 12 hours of harvest for smoothies, broths, and baking.</p>
+                    <ul>
+                        <li>Boosts daily immunity</li>
+                        <li>Rich in iron and calcium</li>
+                    </ul>
+                    <p class="price">$19 · 250g pouch</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="assets/240_F_463753121_yi0oh5X6VNKyG1MPijLz4Vbsdrp7SFqg.jpg" alt="Bottle of moringa vitality tablets">
+                <div>
+                    <h4>Daily Vitality Tablets</h4>
+                    <p>Pressed leaf tablets to simplify office days and travel schedules.</p>
+                    <ul>
+                        <li>Third-party tested purity</li>
+                        <li>Convenient 90-day supply</li>
+                    </ul>
+                    <p class="price">$28 · 240 tablets</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="assets/Moringa_Mint_Lemon_Lime_Water.webp" alt="Moringa mint hydration with citrus slices">
+                <div>
+                    <h4>Hydration Elixir Blend</h4>
+                    <p>Moringa, mint, and citrus crystals for refreshing pitchers that replace sugary drinks.</p>
+                    <ul>
+                        <li>Electrolyte-rich botanicals</li>
+                        <li>Cooling mint & lemon balm</li>
+                    </ul>
+                    <p class="price">$24 · 12 sachets</p>
                 </div>
             </article>
         </section>
